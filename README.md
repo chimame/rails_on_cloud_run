@@ -21,4 +21,11 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Deploy
+```bash
+$ rails new . -TB
+# create Dockerfile and start file
+$ brew cask install google-cloud-sdk
+$ gcloud builds submit --tag gcr.io/[project-id]/rails --project [project-id]
+$ gcloud beta run deploy --image gcr.io/[PROJECT-ID]/rails --project [project-id]
+```
